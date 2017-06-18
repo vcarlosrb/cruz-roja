@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="cruzroja">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>cruzroja</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="assets/resource/circle.css">
+    <link rel="stylesheet" href="assets/resource/font-awesome.css">
+    <link rel="stylesheet" href="assets/resource/fonts.css">
+
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" type="text/css" href="tmp/app.css"/>
+    <!-- endbuild -->
+
+</head>
+<body ng-controller="MainCtrl">
+
+
+<div class="wrapper">
+    <div ui-view="header"></div>
+    <div ui-view></div>
+    <div id="instafeed"></div>
+</div>
+<div class="contFooter" ui-view="footer"></div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/angular-mocks/angular-mocks.js"></script>
+<script src="vendor/angular-ui-utils/ui-utils.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/oauth-js/dist/oauth.min.js"></script>
+<script src="vendor/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+<script src="vendor/angular-deckgrid/angular-deckgrid.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js scripts/app.js -->
+<!-- Main App JS -->
+<script src="app.js"></script>
+<script src="service/twitter.js"></script>
+<script src="partial/home/home.js"></script>
+<script src="service/instagram.js"></script>
+<script src="partial/publish/publish.js"></script>
+<script src="partial/footer/footer.js"></script>
+<script src="service/user.js"></script>
+<script src="service/hashtag.js"></script>
+<script src="service/country.js"></script>
+<script src="service/email.js"></script>
+<!-- Add New Component JS Above -->
+
+<!-- endbuild -->
+
+<script>
+    OAuth.initialize('Y6LyMQb9liMShwaKMSTPPumBDuQ', {
+        cache: true
+    });
+</script>
+
+</body>
+</html>

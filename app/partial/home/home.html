@@ -1,0 +1,155 @@
+<div ng-controller="HomeCtrl">
+    <div class="home">
+        <div class="contHome">
+            <div class="margin">
+                <div class="hmTitle">
+                    <img src="assets/images/logo.png" alt="Dona un Hashtag">
+                </div>
+                <div class="logMap">
+                    <div class="contLogin">
+                        <div class="blockLog">
+                            <form action="">
+                                <ul class="clInput">
+                                    <li>
+                                        <span>Email</span>
+                                        <div class="wInput">
+                                            <input type="text" ng-model="userLog.email">
+                                            <div class="errorBubble" ng-show="validLogEmail">
+                                                <p>Ingrese un Email válido</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Contraseña</span>
+                                        <div class="wInput">
+                                            <input type="password" ng-model="userLog.password">
+                                            <div class="errorBubble" ng-show="validLogPassword">
+                                                <p>Ingrese su contraseña</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="contOption">
+                                    <!--<div class="coInputs">-->
+                                        <!--<div class="coiWrap">-->
+                                            <!--<input type="checkbox" id="remember">-->
+                                            <!--<label for="remember">Recordar Contraseña</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="coiWrap">-->
+                                            <!--<a href="">¿Olvidaste tu contraseña?</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="contButton" ng-show="!loaderLogin">
+                                    <div class="btn btnRed" ng-click="User.login(userLog)">Login</div>
+                                    <!--<p>Si no tienes una cuenta <a href="" ng-click="transition.showSignup()">Registrate-->
+                                        <!--aqui</a></p>-->
+                                </div>
+                                <div class="ContLoader" ng-show="loaderLogin">
+                                    <div class="showbox">
+                                        <div class="loader">
+                                            <svg class="circular" viewBox="25 25 50 50">
+                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3"
+                                                        stroke-miterlimit="10"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="blockSign">
+                            <form action="">
+                                <ul class="clInput">
+                                    <li>
+                                        <span>País</span>
+                                        <div class="wInput">
+                                            <div class="pSelect" ng-click="transition.showSelect()">
+                                                <p>{{currentCountry.nombre || 'Seleccione País'}}</p>
+                                                <div class="psCaret">
+                                                    <i class="fa fa-caret-down"></i>
+                                                </div>
+                                                <div class="listItems">
+                                                    <ul>
+                                                        <li ng-repeat="item in listCountry"
+                                                            ng-click="Country.select(item)">{{item.nombre}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="errorBubble" ng-show="validSignCountry">
+                                                    <p>Seleccione su país</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Nombre</span>
+                                        <div class="wInput">
+                                            <input type="text" ng-model="userSign.name">
+                                            <div class="errorBubble" ng-show="validSignName">
+                                                <p>Ingrese su Nombre</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Apellidos</span>
+                                        <div class="wInput">
+                                            <input type="text" ng-model="userSign.lastName">
+                                            <div class="errorBubble" ng-show="validSignLastName">
+                                                <p>Ingrese sus Apellidos</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Email</span>
+                                        <div class="wInput">
+                                            <input type="text" ng-model="userSign.email">
+                                            <div class="errorBubble" ng-show="validSignEmail">
+                                                <p>Ingrese un email válido</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>Contraseña</span>
+                                        <div class="wInput">
+                                            <input type="password" ng-model="userSign.password">
+                                            <div class="errorBubble" ng-show="validSignPassword">
+                                                <p>Ingrese una contraseña</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>DNI</span>
+                                        <div class="wInput">
+                                            <input type="text" ng-model="userSign.dni">
+                                            <div class="errorBubble" ng-show="validSignDni">
+                                                <p>Ingrese su DNI</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="contButton" ng-show="!loaderSignup">
+                                    <div class="btn btnRed" ng-click="User.signup(userSign)">Registrarse</div>
+                                    <p>Ya tienes una cuenta. <a href="" ng-click="transition.showLogin()">Ingresa
+                                        aqui</a></p>
+                                </div>
+                                <div class="ContLoader" ng-show="loaderSignup">
+                                    <div class="showbox">
+                                        <div class="loader">
+                                            <svg class="circular" viewBox="25 25 50 50">
+                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3"
+                                                        stroke-miterlimit="10"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contMap">
+                        <img src="assets/images/mapa.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

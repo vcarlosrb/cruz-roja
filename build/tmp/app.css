@@ -1,0 +1,1084 @@
+/* Required for Angular UI Bootstrap */
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
+/************** RESETS *****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0; }
+
+h1 img {
+  display: block; }
+
+img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+.nf {
+  clear: both; }
+
+button, textarea, input {
+  outline: none;
+  border: none; }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 6px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #e91b25;
+  -webkit-box-shadow: inset 0 0 6px #e91b25; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(99, 99, 99, 0.51); }
+
+html, body {
+  height: 100%;
+  background-color: #eeeeee; }
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -39px; }
+  .wrapper:after {
+    content: "";
+    display: block;
+    height: 45px; }
+
+.contFooter {
+  height: 39px; }
+
+/* Component SCSS */
+.home {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .home .contHome .hmTitle {
+    padding-top: 40px;
+    margin-bottom: 30px;
+    text-align: center; }
+    .home .contHome .hmTitle img {
+      width: 250px; }
+  .home .contHome .logMap {
+    overflow: hidden; }
+    .home .contHome .logMap .contLogin, .home .contHome .logMap .contMap {
+      float: left;
+      width: 50%; }
+    .home .contHome .logMap .contLogin {
+      padding: 20px 50px; }
+      .home .contHome .logMap .contLogin .blockSign {
+        display: none; }
+    .home .contHome .logMap .contMap img {
+      width: 100%; }
+
+.contLogin .clInput li {
+  display: block;
+  height: 33px;
+  margin-bottom: 15px; }
+  .contLogin .clInput li span {
+    margin-top: 7px;
+    width: 100px;
+    float: left;
+    font-size: 16px;
+    color: #969696;
+    font-family: font3; }
+  .contLogin .clInput li .wInput {
+    position: relative;
+    margin-left: 100px; }
+    .contLogin .clInput li .wInput input {
+      width: 100%;
+      border: 1px solid #e91b25;
+      border-radius: 15px;
+      font-family: font3;
+      font-size: 15px;
+      padding: 5px 15px; }
+.contLogin .contOption {
+  margin-bottom: 30px; }
+.contLogin .ContLoader {
+  margin-left: 100px; }
+.contLogin .contButton {
+  text-align: center;
+  margin-left: 100px; }
+  .contLogin .contButton .btn {
+    width: 100px;
+    margin: 0 auto 20px; }
+  .contLogin .contButton p {
+    margin: 0;
+    font-family: font3;
+    font-size: 13px;
+    color: #787878; }
+    .contLogin .contButton p a {
+      color: #e91b25; }
+
+.pSelect {
+  cursor: pointer;
+  background-color: #e91b25;
+  border-radius: 15px 15px 0 0;
+  padding: 5px 15px;
+  height: 32px;
+  border: 1px solid #e91b25;
+  color: white;
+  position: relative; }
+  .pSelect p {
+    float: left;
+    font-family: font3;
+    margin: 0; }
+  .pSelect .psCaret {
+    float: right;
+    padding-left: 10px;
+    border-left: 1px solid white; }
+  .pSelect .listItems {
+    display: none;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #e91b25;
+    background-color: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10; }
+    .pSelect .listItems li {
+      font-family: font3;
+      padding: 5px 10px;
+      margin-bottom: 0;
+      color: #464646;
+      border-bottom: 1px solid #e91b25;
+      -webkit-transition: 0.3s all ease;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+      .pSelect .listItems li:hover {
+        background-color: whitesmoke; }
+      .pSelect .listItems li:last-child {
+        border-bottom: none; }
+
+.contOption .coInputs {
+  margin-left: 100px;
+  overflow: hidden; }
+  .contOption .coInputs .coiWrap:first-child {
+    float: left; }
+  .contOption .coInputs .coiWrap:last-child {
+    float: right; }
+  .contOption .coInputs .coiWrap label, .contOption .coInputs .coiWrap a {
+    font-family: font3;
+    font-size: 13px;
+    color: #969696;
+    font-weight: normal;
+    margin-bottom: 0; }
+
+.btn {
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold; }
+
+.btnRed {
+  background-color: #e91b25;
+  color: white;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+  .btnRed:hover {
+    color: white;
+    background-color: #c61b24; }
+
+.btnGray {
+  background-color: gainsboro;
+  color: #464646;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+  .btnGray:hover {
+    color: #464646;
+    background-color: #c8c8c8; }
+
+.btnWhite {
+  background-color: white;
+  color: #e91b25; }
+
+.errorBubble {
+  position: absolute;
+  top: 40px;
+  right: 3px;
+  z-index: 5; }
+  .errorBubble p {
+    margin: 0;
+    position: relative;
+    padding: 5px 10px;
+    color: white;
+    background: #FF6169;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: font2;
+    font-size: 11px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); }
+    .errorBubble p:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 6px 6px;
+      border-color: #FF6169 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -6px;
+      right: 15px; }
+
+.publish {
+  display: none;
+  padding: 30px 0 100px; }
+  .publish .pbHead {
+    overflow: hidden;
+    margin-bottom: 10px; }
+    .publish .pbHead h1 {
+      float: left;
+      font-size: 60px;
+      font-family: font3; }
+    .publish .pbHead .pbhShare {
+      float: right; }
+      .publish .pbHead .pbhShare ul {
+        overflow: hidden; }
+        .publish .pbHead .pbhShare ul li {
+          float: right;
+          margin-left: 3px;
+          display: block; }
+          .publish .pbHead .pbhShare ul li a {
+            width: 30px;
+            height: 30px;
+            display: block;
+            background-color: #ea1b25;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px; }
+
+.margin {
+  width: 1000px;
+  margin: 0 auto; }
+
+.publishList {
+  overflow: hidden;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: finite;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: fadeIn;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: finite;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.5s;
+  -o-animation-name: fadeIn;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: finite;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-timing-function: linear;
+  animation-iteration-count: finite;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+  .publishList .pBlock {
+    margin: 10px 5px;
+    background-color: white;
+    border: 1px solid #F7F7F7;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+    .publishList .pBlock .pbHead {
+      padding: 15px;
+      margin-bottom: 0; }
+      .publishList .pBlock .pbHead h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-family: font3; }
+      .publishList .pBlock .pbHead img {
+        width: 100%;
+        margin-bottom: 10px; }
+      .publishList .pBlock .pbHead .pbhUser {
+        overflow: hidden; }
+        .publishList .pBlock .pbHead .pbhUser img {
+          float: left;
+          width: 40px;
+          height: 40px;
+          border-radius: 2px;
+          border: 1px solid rgba(0, 0, 0, 0.3); }
+        .publishList .pBlock .pbHead .pbhUser .pbhData {
+          margin-left: 50px;
+          margin-top: 3px;
+          overflow: hidden; }
+          .publishList .pBlock .pbHead .pbhUser .pbhData .blFollow {
+            float: right;
+            border: 1px solid rgba(233, 27, 37, 0.85);
+            color: rgba(233, 27, 37, 0.85);
+            height: 23px;
+            width: 23px;
+            text-align: center;
+            line-height: 23px;
+            border-radius: 2px;
+            cursor: pointer;
+            -webkit-transition: 0.3s all ease;
+            -moz-transition: 0.3s all ease;
+            -ms-transition: 0.3s all ease;
+            -o-transition: 0.3s all ease;
+            transition: 0.3s all ease; }
+            .publishList .pBlock .pbHead .pbhUser .pbhData .blFollow:hover {
+              background-color: rgba(233, 27, 37, 0.05); }
+          .publishList .pBlock .pbHead .pbhUser .pbhData .blName {
+            margin-right: 30px; }
+          .publishList .pBlock .pbHead .pbhUser .pbhData a {
+            font-size: 14px;
+            font-family: font3;
+            margin-top: 0;
+            margin-bottom: 1px;
+            color: rgba(233, 27, 37, 0.85);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block; }
+            .publishList .pBlock .pbHead .pbhUser .pbhData a:hover {
+              color: rgba(233, 27, 37, 0.85);
+              text-decoration: none; }
+          .publishList .pBlock .pbHead .pbhUser .pbhData p {
+            font-family: font2;
+            color: #9b9b9b;
+            font-size: 12px;
+            text-transform: lowercase; }
+    .publishList .pBlock .pbShare {
+      position: relative;
+      padding: 7px;
+      background: #EFEFEF;
+      border-top: 1px solid #e8e8e8; }
+      .publishList .pBlock .pbShare:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 10px 10px;
+        border-color: #EFEFEF transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: -10px;
+        left: 26px; }
+      .publishList .pBlock .pbShare:before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 10px 10px;
+        border-color: #d6d6d6 transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+        top: -11px;
+        left: 26px; }
+      .publishList .pBlock .pbShare .pbsContent {
+        height: 20px;
+        position: relative; }
+        .publishList .pBlock .pbShare .pbsContent p {
+          cursor: pointer;
+          float: right;
+          font-weight: bold;
+          font-size: 12px;
+          color: #717171;
+          padding: 3px 0; }
+        .publishList .pBlock .pbShare .pbsContent .showMessage {
+          display: none;
+          position: absolute;
+          top: 24px;
+          left: 0;
+          width: 100%; }
+          .publishList .pBlock .pbShare .pbsContent .showMessage .smContent {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            padding: 7px;
+            background: #FFFFFF;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            border: #D2D2D2 solid 1px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+            .publishList .pBlock .pbShare .pbsContent .showMessage .smContent .loader {
+              display: none;
+              width: 30px; }
+            .publishList .pBlock .pbShare .pbsContent .showMessage .smContent textarea {
+              border: 1px solid rgba(233, 27, 37, 0.55);
+              resize: none;
+              border-radius: 2px;
+              width: 100%;
+              padding: 5px 10px;
+              height: 50px;
+              font-family: font2;
+              font-size: 12px; }
+            .publishList .pBlock .pbShare .pbsContent .showMessage .smContent .smcButton {
+              overflow: hidden; }
+              .publishList .pBlock .pbShare .pbsContent .showMessage .smContent .smcButton .btn {
+                float: right;
+                background-color: rgba(233, 27, 37, 0.85);
+                border-radius: 2px;
+                font-size: 12px;
+                -webkit-transition: 0.3s all ease;
+                -moz-transition: 0.3s all ease;
+                -ms-transition: 0.3s all ease;
+                -o-transition: 0.3s all ease;
+                transition: 0.3s all ease; }
+                .publishList .pBlock .pbShare .pbsContent .showMessage .smContent .smcButton .btn:hover {
+                  background-color: #e91b25; }
+            .publishList .pBlock .pbShare .pbsContent .showMessage .smContent:after {
+              content: '';
+              position: absolute;
+              border-style: solid;
+              border-width: 0 8px 8px;
+              border-color: #FFFFFF transparent;
+              display: block;
+              width: 0;
+              z-index: 1;
+              top: -8px;
+              right: 45px; }
+            .publishList .pBlock .pbShare .pbsContent .showMessage .smContent:before {
+              content: '';
+              position: absolute;
+              border-style: solid;
+              border-width: 0 8px 8px;
+              border-color: #bdbdbd transparent;
+              display: block;
+              width: 0;
+              z-index: 0;
+              top: -9px;
+              right: 45px; }
+
+.header {
+  background-color: #e91b25;
+  padding: 10px 30px;
+  height: 50px; }
+  .header .hdLogo {
+    float: left;
+    display: block; }
+    .header .hdLogo img {
+      height: 30px; }
+  .header .hNav {
+    float: right;
+    margin-top: 5px; }
+    .header .hNav li {
+      display: block;
+      float: left;
+      border-left: 1px solid white;
+      position: relative; }
+      .header .hNav li:first-child {
+        border-left: none; }
+      .header .hNav li a {
+        display: block;
+        color: white;
+        font-family: font3;
+        font-size: 14px;
+        padding: 2px 15px;
+        text-decoration: none; }
+      .header .hNav li .dropProfile {
+        display: none;
+        position: absolute;
+        right: 5px;
+        top: 35px; }
+        .header .hNav li .dropProfile .dpContent {
+          position: relative;
+          width: 150px;
+          background: #FFFFFF;
+          border-radius: 2px;
+          border: #e91b25 solid 1px; }
+          .header .hNav li .dropProfile .dpContent p {
+            padding: 7px 15px;
+            margin-bottom: 0;
+            cursor: pointer;
+            font-family: font3;
+            font-size: 14px;
+            -webkit-transition: 0.3s all ease;
+            -moz-transition: 0.3s all ease;
+            -ms-transition: 0.3s all ease;
+            -o-transition: 0.3s all ease;
+            transition: 0.3s all ease; }
+            .header .hNav li .dropProfile .dpContent p:hover {
+              background-color: #f0f0f0; }
+          .header .hNav li .dropProfile .dpContent:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 7px 7px;
+            border-color: #FFFFFF transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            top: -7px;
+            left: 110px; }
+          .header .hNav li .dropProfile .dpContent:before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 7px 7px;
+            border-color: #E70000 transparent;
+            display: block;
+            width: 0;
+            z-index: 0;
+            top: -8px;
+            left: 110px; }
+      .header .hNav li .changePass {
+        display: none;
+        position: absolute;
+        top: 50px;
+        width: 250px;
+        right: 0;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        border-radius: 2px; }
+        .header .hNav li .changePass h4 {
+          font-family: font3;
+          font-size: 14px;
+          color: #464646;
+          margin-bottom: 10px; }
+        .header .hNav li .changePass .cpInput {
+          margin-bottom: 10px; }
+          .header .hNav li .changePass .cpInput:last-child {
+            margin-bottom: 0; }
+          .header .hNav li .changePass .cpInput input {
+            border-radius: 2px;
+            border: 1px solid #e91b25;
+            width: 100%;
+            font-family: font3;
+            font-size: 12px;
+            padding: 5px 10px; }
+        .header .hNav li .changePass .cpButtons {
+          text-align: center; }
+          .header .hNav li .changePass .cpButtons .btn {
+            border-radius: 2px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 12px; }
+
+.secondLoad {
+  display: none; }
+
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0;
+  /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden; }
+
+.deckgrid .column {
+  float: left; }
+
+.deckgrid .column-1-4 {
+  width: 25%; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.loader {
+  position: relative;
+  margin: 0px auto;
+  width: 60px; }
+
+.loader:before {
+  content: '';
+  display: block;
+  padding-top: 100%; }
+
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
+@-webkit-keyframes color {
+  100%, 0% {
+    stroke: #d62d20; } }
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20; } }
+.notItems {
+  padding: 100px 0;
+  text-align: center;
+  color: #999999;
+  font-family: font3;
+  font-size: 18px; }
+
+.contSearch {
+  padding-top: 30px;
+  margin-bottom: 30px; }
+  .contSearch .csWrap {
+    width: 550px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 5px 0; }
+    .contSearch .csWrap img, .contSearch .csWrap input, .contSearch .csWrap div {
+      float: left; }
+    .contSearch .csWrap img {
+      width: 30px;
+      margin-right: 15px; }
+    .contSearch .csWrap input {
+      font-family: font3;
+      border-radius: 2px;
+      font-size: 18px;
+      padding: 5px 10px;
+      border: 1px solid #e91b25;
+      width: 400px;
+      margin-right: 15px;
+      -webkit-transition: 0.3s all ease;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+      .contSearch .csWrap input:focus {
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.3); }
+    .contSearch .csWrap .btn {
+      width: 90px;
+      padding: 7px 0; }
+
+.contAdmin {
+  padding: 30px 0; }
+  .contAdmin .caWrapper {
+    overflow: hidden; }
+    .contAdmin .caWrapper .cwBlock {
+      float: left; }
+      .contAdmin .caWrapper .cwBlock .cwUnit {
+        margin-bottom: 20px; }
+        .contAdmin .caWrapper .cwBlock .cwUnit:last-child {
+          margin-bottom: 0; }
+    .contAdmin .caWrapper .block-A {
+      width: 30%; }
+    .contAdmin .caWrapper .block-B {
+      width: 40%;
+      margin: 0 2.5%; }
+    .contAdmin .caWrapper .block-C {
+      width: 25%; }
+
+.cwUnit .cwuHead {
+  background-image: url("/assets/images/headTab.jpg");
+  padding: 10px 0;
+  text-align: center;
+  color: #e91b25;
+  font-family: font3;
+  font-size: 14px; }
+.cwUnit .cwuBody {
+  background-color: white;
+  padding: 10px; }
+
+.panelPerc {
+  overflow: hidden; }
+  .panelPerc li {
+    display: block;
+    float: left;
+    padding: 10px 0;
+    cursor: pointer;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    width: 12%;
+    margin-right: 0.5%;
+    text-align: center; }
+    .panelPerc li:last-child {
+      margin-right: 0; }
+    .panelPerc li span {
+      color: #e91b25;
+      font-family: font3;
+      font-size: 12px;
+      display: block;
+      -webkit-transition: 0.3s all ease;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+    .panelPerc li .barra {
+      position: relative;
+      height: 100px;
+      margin: 5px 0;
+      text-align: center; }
+      .panelPerc li .barra .brCont {
+        position: absolute;
+        bottom: 0;
+        left: 9px;
+        width: 10px;
+        height: 0; }
+        .panelPerc li .barra .brCont .brcWrap {
+          height: 100%;
+          width: 100%;
+          position: relative; }
+          .panelPerc li .barra .brCont .brcWrap .brcColor {
+            position: absolute;
+            border-radius: 4px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e91b25;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-name: chargeAnimate;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: finite;
+            -webkit-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            -moz-animation-delay: 0s;
+            -moz-animation-duration: 1s;
+            -moz-animation-name: chargeAnimate;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: finite;
+            -moz-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            -o-animation-delay: 0s;
+            -o-animation-duration: 1s;
+            -o-animation-name: chargeAnimate;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: finite;
+            -o-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            animation-delay: 0s;
+            animation-duration: 1s;
+            animation-name: chargeAnimate;
+            animation-timing-function: linear;
+            animation-iteration-count: finite;
+            animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */ }
+    .panelPerc li p {
+      margin: 0;
+      color: #e91b25;
+      font-size: 10px;
+      font-family: font3;
+      -webkit-transition: 0.3s all ease;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+    .panelPerc li:nth-child(2n) .barra .brCont .brcColor {
+      background-color: purple; }
+    .panelPerc li:nth-child(2n) p {
+      color: purple; }
+    .panelPerc li:nth-child(3n) .barra .brCont .brcColor {
+      background-color: orange; }
+    .panelPerc li:nth-child(3n) p {
+      color: orange; }
+    .panelPerc li:hover {
+      background-color: #f0f0f0; }
+      .panelPerc li:hover span, .panelPerc li:hover p {
+        -webkit-transform: scale(1.4);
+        -moz-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        -o-transform: scale(1.4);
+        transform: scale(1.4); }
+
+@keyframes chargeAnimate {
+  0% {
+    height: 0; }
+  100% {
+    height: 100%; } }
+.newHashtag {
+  padding: 10px 0;
+  overflow: hidden; }
+  .newHashtag li {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 2% 5%;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    cursor: pointer; }
+    .newHashtag li:hover {
+      background-color: whitesmoke; }
+    .newHashtag li p {
+      margin: 0;
+      font-family: font3;
+      font-size: 13px;
+      color: #969696; }
+    .newHashtag li .barra {
+      width: 100%;
+      background-color: #e6e6e6; }
+      .newHashtag li .barra .brCont {
+        height: 7px; }
+        .newHashtag li .barra .brCont .brcColor {
+          height: 7px;
+          background-color: #e91b25;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-duration: 1s;
+          -webkit-animation-name: chargeAnimateWidth;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-iteration-count: finite;
+          -webkit-animation-fill-mode: forwards;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0s;
+          -moz-animation-duration: 1s;
+          -moz-animation-name: chargeAnimateWidth;
+          -moz-animation-timing-function: linear;
+          -moz-animation-iteration-count: finite;
+          -moz-animation-fill-mode: forwards;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0s;
+          -o-animation-duration: 1s;
+          -o-animation-name: chargeAnimateWidth;
+          -o-animation-timing-function: linear;
+          -o-animation-iteration-count: finite;
+          -o-animation-fill-mode: forwards;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0s;
+          animation-duration: 1s;
+          animation-name: chargeAnimateWidth;
+          animation-timing-function: linear;
+          animation-iteration-count: finite;
+          animation-fill-mode: forwards;
+          /* this prevents the animation from restarting! */ }
+    .newHashtag li .number {
+      overflow: hidden; }
+      .newHashtag li .number span {
+        color: #969696;
+        font-family: font3;
+        font-size: 12px; }
+        .newHashtag li .number span:last-child {
+          float: right; }
+        .newHashtag li .number span:first-child {
+          float: left; }
+
+@keyframes chargeAnimateWidth {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+.listScroll {
+  height: 495px;
+  overflow-y: auto; }
+
+.listUser li {
+  display: block;
+  padding: 15px 20px 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+  .listUser li:hover {
+    background-color: #f0f0f0; }
+  .listUser li img {
+    width: 50px;
+    float: left;
+    border-radius: 50%; }
+  .listUser li .luData {
+    margin-left: 60px; }
+    .listUser li .luData h4 {
+      font-family: font3;
+      color: #5a5a5a;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .listUser li .luData p {
+      font-family: font3;
+      color: #e91b25;
+      margin-bottom: 0; }
+    .listUser li .luData span {
+      font-family: font2;
+      color: #b4b4b4;
+      font-size: 12px; }
+  .listUser li:last-child {
+    margin-bottom: 0; }
+
+.listSocial {
+  text-align: center;
+  padding: 10px 0; }
+  .listSocial li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 17px;
+    cursor: pointer;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease; }
+    .listSocial li img {
+      width: 60px; }
+    .listSocial li span {
+      font-family: font3;
+      margin-top: 15px;
+      font-size: 25px;
+      display: block;
+      -webkit-transition: 0.3s all ease;
+      -moz-transition: 0.3s all ease;
+      -ms-transition: 0.3s all ease;
+      -o-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+    .listSocial li .c100 img {
+      position: absolute;
+      z-index: 10;
+      top: 15px;
+      left: 16px; }
+    .listSocial li:hover {
+      background-color: whitesmoke; }
+      .listSocial li:hover span {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+  .listSocial .lsBlue .c100 .bar {
+    border: 0.125em solid #3A559F; }
+  .listSocial .lsSkyBlue .c100 .bar {
+    border: 0.125em solid #59A7DD; }
+  .listSocial .lsBrown .c100 .bar {
+    border: 0.125em solid #9E6E52; }
+
+.seeMore {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+  .seeMore:hover {
+    background-color: #f0f0f0; }
+  .seeMore i {
+    color: #e91b25;
+    font-size: 75px;
+    line-height: 52px; }
+
+.sendHashtag {
+  overflow: hidden;
+  padding: 20px 0; }
+  .sendHashtag .shBlock {
+    float: left;
+    width: 50%; }
+    .sendHashtag .shBlock:first-child {
+      text-align: right; }
+      .sendHashtag .shBlock:first-child img {
+        margin-right: 25px;
+        width: 55%; }
+    .sendHashtag .shBlock:last-child img {
+      width: 70%;
+      margin-bottom: 10px; }
+    .sendHashtag .shBlock:last-child p {
+      margin: 0;
+      font-size: 45px;
+      color: #e91b25;
+      margin-left: 25px;
+      font-family: font3; }
+
+.footer {
+  background-color: #e91b25;
+  overflow: hidden;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 5; }
+  .footer .ftSocial {
+    float: left;
+    overflow: hidden; }
+    .footer .ftSocial li {
+      display: block;
+      margin-right: 20px;
+      float: left; }
+      .footer .ftSocial li a {
+        color: white; }
+      .footer .ftSocial li:last-child {
+        margin-right: 0; }
+  .footer .copyRight {
+    padding-top: 5px;
+    float: right;
+    color: white;
+    font-family: font1;
+    font-size: 10px; }
+    .footer .copyRight p {
+      margin-bottom: 0; }
+
+/* Add Component SCSS Above */
+
+/*# sourceMappingURL=app.css.map */

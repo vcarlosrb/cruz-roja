@@ -1,0 +1,249 @@
+<div ng-controller="PublishCtrl">
+    <header class="header">
+        <a href="#/" class="hdLogo">
+            <img src="assets/images/header.png" alt="">
+        </a>
+        <ul class="hNav">
+            <li><a href="" ng-click="partPublish.showDashboard()">Dashboard</a></li>
+            <li>
+                <a href="" ng-click="Toggle.showDoropdown()">{{userData.nombre}} <i class="fa fa-caret-down"></i></a>
+                <div class="dropProfile">
+                    <div class="dpContent">
+                        <p ng-click="Password.showDialog()">Cambiar Contraseña</p>
+                        <p ng-click="userOptions.logout()">Logout</p>
+                    </div>
+                </div>
+                <div class="changePass">
+                    <h4>Cambiar Contraseña</h4>
+                    <div class="cpInput">
+                        <input type="password" placeholder="Antigua Contraseña">
+                    </div>
+                    <div class="cpInput">
+                        <input type="password" placeholder="Nueva Contraseña">
+                    </div>
+                    <div class="cpInput">
+                        <input type="password" placeholder="Repita su contraseña">
+                    </div>
+                    <div class="cpButtons">
+                        <div class="btn btnGray" ng-click="Password.closeDialog()">Cancelar</div>
+                        <div class="btn btnRed">Cambiar</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div class="contSearch">
+        <div class="csWrap">
+            <img src="assets/images/hashtag.png" alt="">
+            <input type="text" placeholder="Localiza el #hashtag aquí" id="search" ng-model="hashtag">
+            <div class="btn btnRed" ng-click="partPublish.search(hashtag)">Buscar</div>
+        </div>
+    </div>
+    <div class="contAdmin">
+        <div class="margin">
+            <div class="caWrapper">
+                <div class="block-A cwBlock">
+                    <div class="cwUnit">
+                        <div class="cwuHead">Porcentajes por tipo de sangre</div>
+                        <div class="cwuBody">
+                            <ul class="panelPerc" ng-show="listPercentage">
+                                <li ng-repeat="item in listPercentage">
+                                    <span ng-if="item.tipo=='ONegativoPeru'">#0-</span>
+                                    <span ng-if="item.tipo=='opositivoperu'">#0+</span>
+                                    <span ng-if="item.tipo=='bnegativoperu'">#B-</span>
+                                    <span ng-if="item.tipo=='bpositivoperu'">#B+</span>
+                                    <span ng-if="item.tipo=='anegativoperu'">#A-</span>
+                                    <span ng-if="item.tipo=='apositivoperu'">#A+</span>
+                                    <span ng-if="item.tipo=='abnegativoperu'">#AB-</span>
+                                    <span ng-if="item.tipo=='abpositivoperu'">#AB+</span>
+                                    <div class="barra">
+                                        <div class="brCont" style="height: {{item.porcentage}}px">
+                                            <div class="brcWrap">
+                                                <div class="brcColor"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>{{item.porcentage}}%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cwUnit">
+                        <div class="cwuHead">Hashtag nuevos de la semana</div>
+                        <div class="cwuBody">
+                            <ul class="newHashtag" ng-show="listWeek">
+                                <li ng-repeat="item in listWeek.list">
+                                    <p>#{{item.tipo}}</p>
+                                    <div class="barra">
+                                        <div class="brCont" style="width: {{item.porcentage.toFixed(1)}}%">
+                                            <div class="brcColor"></div>
+                                        </div>
+                                    </div>
+                                    <div class="number">
+                                        <span>0</span>
+                                        <span>{{listWeek.max}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-B cwBlock">
+                    <div class="cwUnit">
+                        <div class="cwuHead">Cantidad de hashtag enviados</div>
+                        <div class="cwuBody">
+                            <div class="sendHashtag">
+                                <div class="shBlock">
+                                    <img src="assets/images/ico_face.png" alt="">
+                                </div>
+                                <div class="shBlock">
+                                    <img src="assets/images/ico_email.png" alt="">
+                                    <p>{{totalAnswer}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cwUnit">
+                        <div class="cwuHead">Cantidad de hashtag enviados</div>
+                        <div class="cwuBody">
+                            <ul class="listSocial" ng-show="listSocial">
+                                <li ng-repeat="item in listSocial">
+                                    <div class="lsBlue" ng-if="item.tipo=='FACEBOOK'">
+                                        <div class="c100 p{{item.num}}">
+                                            <img src="assets/images/ico_facebook.png" alt="">
+                                            <div class="slice">
+                                                <div class="bar"></div>
+                                                <div class="fill"></div>
+                                            </div>
+                                        </div>
+                                        <span style="color: #3a559f">{{item.porcentage}}%</span>
+                                    </div>
+                                    <div class="lsSkyBlue" ng-if="item.tipo=='TWITTER'">
+                                        <div class="c100 p{{item.num}}">
+                                            <img src="assets/images/ico_twitter.png" alt="">
+                                            <div class="slice">
+                                                <div class="bar"></div>
+                                                <div class="fill"></div>
+                                            </div>
+                                        </div>
+                                        <span style="color: #59a7dd">{{item.porcentage}}%</span>
+                                    </div>
+                                    <div class="lsBrown" ng-if="item.tipo=='INSTAGRAM'">
+                                        <div class="c100 p{{item.num}}">
+                                            <img src="assets/images/ico_instagram.png" alt="">
+                                            <div class="slice">
+                                                <div class="bar"></div>
+                                                <div class="fill"></div>
+                                            </div>
+                                        </div>
+
+                                        <span style="color: #9e6e52">{{item.porcentage}}%</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-C cwBlock">
+                    <div class="cwUnit">
+                        <div class="cwuHead">Donadores de hashtag</div>
+                        <div class="cwuBody">
+                            <div class="listScroll" ng-show="listTweets">
+                                <ul class="listUser">
+                                    <li ng-repeat="item in listTweets">
+                                        <img src="{{item.imagen || 'assets/images/test.png'}}" alt="">
+                                        <div class="luData">
+                                            <h4>{{item.nombre}}</h4>
+                                            <p>#{{item.tipo_sangre}}</p>
+                                            <span>hace 32 minutos</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="publish">
+        <div class="margin">
+            <div class="pbHead">
+                <h1>#{{title}}</h1>
+            </div>
+            <div class="notItems" ng-show="tweets.length==0 && loader==false">No hay publicaciones para mostrar.</div>
+
+            <div class="publishList" infinite-scroll='partPublish.nextResults()' infinite-scroll-distance='0'>
+                <div deckgrid class="deckgrid" source="tweets">
+                    <div class="pBlock">
+                        <div class="pbHead">
+                            <h3>{{card.text}}</h3>
+                            <img ng-show="card.entities.media.media_url_https"
+                                 src="{{card.entities.media.media_url_https}}" alt="">
+                            <div class="pbhUser">
+                                <img src="{{card.user.profile_background_image_url || 'assets/images/test.png'}}"
+                                     alt="">
+                                <div class="pbhData">
+                                    <div class="blFollow" ng-show="card.red_social=='TWITTER'"
+                                         ng-click="mother.Twitter.followUser(card.user.id, $event)">
+                                        <i class="fa fa-user-plus"></i>
+                                    </div>
+                                    <div class="blName">
+                                        <a ng-click="mother.Dashboard.count()" href="https://twitter.com/{{card.user.screen_name}}"
+                                           ng-show="card.red_social=='TWITTER'" target="_blank">{{card.user.name}}</a>
+                                        <a ng-click="Dashboard.count()" href="https://www.facebook.com/{{card.user.screen_name}}"
+                                           ng-show="card.red_social=='FACEBOOK'" target="_blank">{{card.user.name}}</a>
+                                        <a ng-click="Dashboard.count()" href="https://www.instagram.com/{{card.user.screen_name}}"
+                                           ng-show="card.red_social=='INSTAGRAM'" target="_blank">{{card.user.name}}</a>
+                                        <p>via {{card.red_social}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pbShare" ng-show="card.red_social=='TWITTER'">
+                            <div class="pbsContent">
+                                <p ng-click="mother.partPublish.showMessage($event)">Dejar Tweet</p>
+                                <div class="showMessage">
+                                    <div class="smContent">
+                                        <textarea class="getMessage" placeholder="Escribe un mensaje">@{{card.user.screen_name}} </textarea>
+                                        <div class="loader">
+                                            <svg class="circular" viewBox="25 25 50 50">
+                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3"
+                                                        stroke-miterlimit="10"/>
+                                            </svg>
+                                        </div>
+                                        <div class="smcButton">
+                                            <div class="btn btnRed"
+                                                 ng-click="mother.Twitter.updateStatuses($event)">Enviar
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ContLoader" ng-show="loader">
+                <div class="showbox">
+                    <div class="loader">
+                        <svg class="circular" viewBox="25 25 50 50">
+                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3"
+                                    stroke-miterlimit="10"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="ContLoader secondLoad">
+                <div class="showbox">
+                    <div class="loader">
+                        <svg class="circular" viewBox="25 25 50 50">
+                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3"
+                                    stroke-miterlimit="10"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
